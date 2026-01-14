@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <title>its Kv7 | Kavindu Nilanga Lyr</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Add jsPDF library for PDF generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-gradient">its Kv7</span>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#credentials" class="nav-link">Credentials</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="section hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="hero-title-line">Creative</span>
+                    <span class="hero-title-line">Developer &</span>
+                    <span class="hero-title-line gradient-text">Designer</span>
+                </h1>
+                <p class="hero-subtitle">Crafting digital experiences that blend innovation with aesthetics</p>
+                <div class="hero-buttons">
+                    <a href="#about" class="btn btn-primary">Explore Me</a>
+                    <a href="#credentials" class="btn btn-outline">My Educations </a>
+                </div>
+            </div>
+            <div class="hero-image-container">
+                <div class="hero-image floating">
+                    <div class="hero-image-inner glass-effect">
+                        <img src="placeholder.png" alt="Kavindu Nilanga">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Discover my journey, skills, and passion for creating digital experiences</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text-content">
+                    <div class="profile-intro glass-card">
+                        <h3 class="profile-title">My Approach</h3>
+                        <p class="profile-description">My approach combines technical expertise with creative thinking to deliver solutions that not only look stunning but also perform exceptionally. I believe in crafting digital experiences that are both beautiful and functional, ensuring that every project meets the highest standards of quality and user experience.</p>
+                    </div>
+ 
+                </div>
+                
+                <div class="about-visual-content">
+                    <!-- Stats Section -->
+                    <div class="profile-stats">
+                        <div class="stat-item glass-card">
+                            <h5 class="stat-number">30 +</h5>
+                            <p class="stat-label">Projects Completed</p>
+                        </div>
+                        <div class="stat-item glass-card">
+                            <h5 class="stat-number">1 +</h5>
+                            <p class="stat-label">Years Experience</p>
+                        </div>
+                        <div class="stat-item glass-card">
+                            <h5 class="stat-number">30 +</h5>
+                            <p class="stat-label">Happy Clients</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links glass-card">
+                        <a href="https://github.com/MrKv7" class="social-link interactive-element">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.instagram.com/im.kv7/" class="social-link interactive-element">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://discord.gg/hfKagkb67Y" class="social-link interactive-element">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                        <a href="https://www.instagram.com/im.kv7/" class="social-link interactive-element">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Credentials Timeline Section -->
+    <section id="credentials" class="section credentials-timeline-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My Journey & Achievements</h2>
+                <p class="section-subtitle">Professional milestones and certifications earned along the way</p>
+            </div>
+            
+            <div class="timeline-container">
+                <!-- Timeline Path -->
+                <div class="timeline-path"></div>
+                
+                <!-- Timeline Items -->
+                <div class="timeline-item left">
+                    <div class="timeline-badge glass-badge">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <div class="timeline-card glass-card-2">
+                        <div class="card-header">
+                            <h3 class="timeline-title">Professional Portfolio</h3>
+                            <span class="timeline-date">Present</span>
+                        </div>
+                        <p class="timeline-description">Complete professional resume showcasing skills, experience, and achievements in technology and development</p>
+                        <div class="card-footer">
+                            <span class="credential-tag resume">Portfolio</span>
+                            <a href="Maintain.html" class="btn btn-outline timeline-btn" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i> View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="timeline-badge glass-badge">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <div class="timeline-card glass-card-2">
+                        <div class="card-header">
+                            <h3 class="timeline-title">Computer Hardware Technician NVQ Level 4</h3>
+                            <span class="timeline-date">Completed</span>
+                        </div>
+                        <p class="timeline-description">Advanced certification demonstrating expertise in computer hardware repair and maintenance</p>
+                        <div class="card-footer">
+                            <span class="credential-tag technical">Technical</span>
+                            <a href="Maintain.html" class="btn btn-outline timeline-btn" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-lock"></i> Private
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item left">
+                    <div class="timeline-badge glass-badge">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <div class="timeline-card glass-card-2">
+                        <div class="card-header">
+                            <h3 class="timeline-title">Computer Networking Fundamentals</h3>
+                            <span class="timeline-date">Completed</span>
+                        </div>
+                        <p class="timeline-description">Core understanding of network infrastructure, protocols, and system connectivity</p>
+                        <div class="card-footer">
+                            <span class="credential-tag networking">Networking</span>
+                            <a href="Certificates/ITEHR202203-certificate.pdf" class="btn btn-outline timeline-btn" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="timeline-badge glass-badge">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="timeline-card glass-card-2">
+                        <div class="card-header">
+                            <h3 class="timeline-title">Introduction to Cybersecurity</h3>
+                            <span class="timeline-date">Completed</span>
+                        </div>
+                        <p class="timeline-description">Fundamental knowledge of protecting digital assets and implementing security measures</p>
+                        <div class="card-footer">
+                            <span class="credential-tag security">Security</span>
+                            <a href="Certificates/Introduction_to_Cybersecurity_ORG.pdf" class="btn btn-outline timeline-btn" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-file-pdf"></i> Certificate
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item left">
+                    <div class="timeline-badge glass-badge">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="timeline-card glass-card-2">
+                        <div class="card-header">
+                            <h3 class="timeline-title">IT Essentials: PC Hardware and Software</h3>
+                            <span class="timeline-date">Completed</span>
+                        </div>
+                        <p class="timeline-description">Comprehensive understanding of PC components, operating systems, and software applications</p>
+                        <div class="card-footer">
+                            <span class="credential-tag foundational">Essential</span>
+                            <a href="Certificates/IT_Essentials_certificate_.pdf" class="btn btn-outline timeline-btn" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-award"></i> Verify
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="timeline-badge glass-badge ongoing">
+                        <i class="fas fa-user-ninja"></i>
+                    </div>
+                    <div class="timeline-card glass-card-2 ongoing-card">
+                        <div class="card-header">
+                            <h3 class="timeline-title">Ethical Hacking Certification</h3>
+                            <span class="timeline-date">In Progress</span>
+                        </div>
+                        <p class="timeline-description">Advanced study of penetration testing, vulnerability assessment, and defensive security strategies</p>
+                        <div class="progress-container">
+                            <div class="skill-progress">
+                                <span class="progress-label">Completion</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 65%"></div>
+                                </div>
+                                <span class="progress-percent">65%</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="credential-tag ongoing">CEH Prep</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item left">
+                    <div class="timeline-badge glass-badge ongoing">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-card glass-card-2 ongoing-card">
+                        <div class="card-header">
+                            <h3 class="timeline-title">National Diploma in ICT</h3>
+                            <span class="timeline-date">Currently Studying</span>
+                        </div>
+                        <p class="timeline-description">Comprehensive program covering web development, software engineering, QA testing, graphic design, and multimedia production</p>
+                        <div class="specializations">
+                            <span class="spec-tag">Web Dev</span>
+                            <span class="spec-tag">Software</span>
+                            <span class="spec-tag">QA Testing</span>
+                            <span class="spec-tag">Design</span>
+                        </div>
+                        <div class="progress-container">
+                            <div class="skill-progress">
+                                <span class="progress-label">Program Progress</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 40%"></div>
+                                </div>
+                                <span class="progress-percent">40%</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="credential-tag ongoing">Diploma</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Stats Summary -->
+            <div class="credentials-stats">
+                <div class="stat-card glass-card-2">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Certifications</div>
+                </div>
+                <div class="stat-card glass-card-2">
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">Ongoing Programs</div>
+                </div>
+                <div class="stat-card glass-card-2">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">Technical Fields</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's discuss your next project</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 class="contact-title">Let's Connect</h3>
+                    <p class="contact-description">Have a project in mind or want to learn more about my services? Feel free to reach out!</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item" role="region" aria-labelledby="email-contact">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4 id="email-contact">Email</h4>
+                                <p>Kavindunilanga468@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item" role="region" aria-labelledby="discord-contact">
+                            <div class="contact-icon">
+                                <i class="fab fa-discord"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4 id="discord-contact">Discord</h4>
+                                <p>@kv_liyanaarachchi</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item" role="region" aria-labelledby="location-contact">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4 id="location-contact">Location</h4>
+                                <p>Raigama, Bandaragama / Horana</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container glass-effect" role="form" aria-label="Contact Form">
+                    <h3 class="form-title">Send Me a Message</h3>
+                    <form id="contactForm" class="contact-form" novalidate>
+                        <div class="form-group">
+                            <label for="fullName">Full Name <span aria-label="required">*</span></label>
+                            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required aria-required="true">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address <span aria-label="required">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email address" required aria-required="true">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactNumber">Contact Number <span aria-label="required">*</span></label>
+                            <input type="tel" id="contactNumber" name="contactNumber" placeholder="Enter your phone number" required aria-required="true">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Message <span aria-label="required">*</span></label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or inquiry..." required aria-required="true"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary submit-btn" aria-label="Send message">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-gradient">Portfolio</span>
+                </div>
+                <p class="footer-text"> </p>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 - Kavindu Nilanga lyr . All rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    
+    <!-- Document Viewer Modal -->
+    <div id="documentViewerModal" class="modal">
+        <div class="modal-content document-viewer">
+            <span class="close">&times;</span>
+            <h2 id="documentTitle">Document Viewer</h2>
+            <div id="documentContent">
+                <!-- Document content will be loaded here -->
+                <div class="document-placeholder">
+                    <i class="fas fa-file-alt"></i>
+                    <p id="documentName">Document Preview</p>
+                    <p>This is a placeholder for the document content. In a real implementation, this would display the actual document.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

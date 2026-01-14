@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <title>Maintenance | its Kv7</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-gradient">its Kv7</span>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="portfolio.html" class="nav-link">Back to Portfolio</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Maintenance Section -->
+    <section class="section hero maintenance-section">
+        <div class="container hero-content maintenance-content">
+            <div class="maintenance-text">
+                <h1 class="maintenance-title">
+                    <span class="hero-title-line">Feature</span>
+                    <span class="hero-title-line">Under</span>
+                    <span class="hero-title-line gradient-text">Maintenance</span>
+                </h1>
+                <p class="maintenance-subtitle">This Feature Is Still Maintaining By The Administrator</p>
+                <div class="maintenance-buttons">
+                    <a href="portfolio.html" class="btn btn-primary">
+                        <i class="fas fa-arrow-left"></i> Back to Website
+                    </a>
+                </div>
+            </div>
+            <div class="maintenance-image-container">
+                <div class="maintenance-image floating">
+                    <div class="maintenance-image-inner glass-effect">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Animated Background Elements -->
+        <div class="maintenance-animation">
+            <div class="gear gear-1"></div>
+            <div class="gear gear-2"></div>
+            <div class="gear gear-3"></div>
+            <div class="sparkle sparkle-1"></div>
+            <div class="sparkle sparkle-2"></div>
+            <div class="sparkle sparkle-3"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-gradient">Portfolio</span>
+                </div>
+                <p class="footer-text">Currently Under Maintenance</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 - Kavindu Nilanga lyr . All rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Maintenance page specific animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add floating animation to maintenance elements
+            const maintenanceElements = document.querySelectorAll('.maintenance-image, .gear, .sparkle');
+            
+            maintenanceElements.forEach((element, index) => {
+                element.style.animationDelay = `${index * 0.2}s`;
+            });
+            
+            // Add 3D tilt effect to maintenance image
+            const maintenanceImage = document.querySelector('.maintenance-image');
+            if (maintenanceImage) {
+                maintenanceImage.addEventListener('mousemove', (e) => {
+                    const rect = maintenanceImage.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    
+                    const rotateX = (y - centerY) / 10;
+                    const rotateY = (centerX - x) / 10;
+                    
+                    maintenanceImage.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+                });
+                
+                maintenanceImage.addEventListener('mouseleave', () => {
+                    maintenanceImage.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
+                });
+            }
+        });
+    </script>
+</body>
+</html>
