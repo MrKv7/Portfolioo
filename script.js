@@ -1,4 +1,16 @@
 // Modern Portfolio JavaScript - Enhanced Version
+
+// Google Analytics Event Tracking Helper
+function trackEvent(category, action, label, value) {
+    if (typeof gtag !== 'undefined') {
+        gtag('event', action, {
+            'event_category': category,
+            'event_label': label,
+            'value': value
+        });
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile Navigation Toggle
     const hamburger = document.querySelector('.hamburger');
@@ -36,6 +48,9 @@ document.addEventListener('DOMContentLoaded', function() {
             const serviceCard = this.closest('.service-card');
             const serviceName = serviceCard.querySelector('.service-title').textContent.trim();
             const price = serviceCard.querySelector('.price-amount').textContent;
+            
+            // Track service button clicks
+            trackEvent('Service', 'click', serviceName, parseFloat(price.replace(/[^\d.-]/g, '')));
             
             console.log("Service selected:", serviceName, price);
             
@@ -201,6 +216,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Close mobile menu when clicking on a link
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
+            // Track navigation clicks
+            const linkText = link.textContent.trim();
+            trackEvent('Navigation', 'click', linkText);
+            
             navLinks.classList.remove('active');
             hamburger.classList.remove('toggle');
         });
@@ -211,7 +230,12 @@ document.addEventListener('DOMContentLoaded', function() {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
             
-            const target = document.querySelector(this.getAttribute('href'));
+            const targetId = this.getAttribute('href');
+            const target = document.querySelector(targetId);
+            
+            // Track anchor link clicks
+            trackEvent('Anchor Link', 'click', targetId.replace('#', ''));
+            
             if (target) {
                 window.scrollTo({
                     top: target.offsetTop - 100,
@@ -338,6 +362,9 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             console.log('Contact form submitted');
             
+            // Track form submission attempt
+            trackEvent('Contact Form', 'submit_attempt', 'Contact Page');
+            
             // Get form data
             const fullName = document.getElementById('fullName').value;
             const email = document.getElementById('email').value;
@@ -409,7 +436,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 })
                 .then(result => {
                     // Show success message
-                    createNotification(`Thank you ${fullName}! Your message has been sent successfully. I'll contact you at ${email} shortly.`);
+                    createNotification(`Thank you ${fullName}! Your message has been sent But Not receive To The Admin Right Now. Please Contact Him VIa Whatsapp By ${contactNumber}. If He Receive Your Message He Will contact you at ${email} shortly.`);
+                    
+                    // Track successful contact form submission
+                    trackEvent('Contact Form', 'submit_success', 'Contact Page');
                     
                     // Reset form
                     contactForm.reset();
@@ -589,6 +619,35 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Modal functionality is already handled above in the existing implementation
+    
+    // Add Google Analytics tracking to social media links
+    const footerSocialLinks = document.querySelectorAll('.social-link');
+    footerSocialLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const socialPlatform = this.href.includes('github') ? 'GitHub' :
+                                 this.href.includes('facebook') ? 'Facebook' :
+                                 this.href.includes('discord') ? 'Discord' :
+                                 this.href.includes('whatsapp') ? 'WhatsApp' : 'Other';
+            
+            trackEvent('Social Media', 'click', socialPlatform);
+        });
+    });
+    
+    // Track page view duration
+    let pageStartTime = Date.now();
+    window.addEventListener('beforeunload', function() {
+        const timeSpent = Math.round((Date.now() - pageStartTime) / 1000);
+        trackEvent('Page', 'time_spent', window.location.pathname, timeSpent);
+    });
+    
+    // Track window visibility changes
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            trackEvent('Page', 'blur', window.location.pathname);
+        } else {
+            trackEvent('Page', 'focus', window.location.pathname);
+        }
+    });
 });
 
 // Initialize animations
@@ -1610,8 +1669,8 @@ function sendToTelegram(formData, pdfBlob) {
     return new Promise((resolve, reject) => {
         try {
             // Telegram Bot Token and Chat ID - YOU MUST REPLACE THESE WITH YOUR ACTUAL VALUES
-            const BOT_TOKEN = 'YOUR_TELEGRAM_BOT_TOKEN'; // Replace with your actual bot token from @BotFather
-            const CHAT_ID = 'YOUR_CHAT_ID'; // Replace with your actual chat ID from @userinfobot
+            const BOT_TOKEN = '8241595280:AAGsz3wmbSn-pIZidVe8Nims3W5xBQAWYc8'; // Replace with your actual bot token from @BotFather
+            const CHAT_ID = '6941188875'; // Replace with your actual chat ID from @userinfobot
             
             // Create form data for Telegram
             const telegramData = new FormData();

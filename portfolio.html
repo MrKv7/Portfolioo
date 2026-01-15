@@ -14,6 +14,25 @@
     <link rel="icon" type="image/png" href="Kv.png">
     <!-- Add jsPDF library for PDF generation -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9LC63DTVCR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-9LC63DTVCR', {
+        'anonymize_ip': true,
+        'cookie_expires': 28 * 24 * 60 * 60, // 28 days
+        'send_page_view': true
+      });
+      
+      // Enhanced event tracking
+      gtag('event', 'page_view', {
+        'page_title': document.title,
+        'page_location': window.location.href
+      });
+    </script>
 </head>
 <body>
     <!-- Navigation -->
