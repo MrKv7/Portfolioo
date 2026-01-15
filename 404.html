@@ -1,33 +1,337 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Page Not Found</title>
-
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px 16px; border-radius: 3px; }
-      #message h3 { color: #888; font-weight: normal; font-size: 16px; margin: 16px 0 12px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | its Kv7</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            background-attachment: fixed;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.15) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.15) 0%, transparent 20%);
+            z-index: -1;
+        }
+        
+        .container {
+            text-align: center;
+            padding: 40px 20px;
+            max-width: 800px;
+            width: 90%;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .error-animation {
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .error-number {
+            font-size: 8rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #2563eb, #7c3aed, #ec4899);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 20px;
+            letter-spacing: -0.05em;
+            text-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .error-icon {
+            font-size: 4rem;
+            color: #fbbf24;
+            margin-bottom: 30px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        .error-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: white;
+            letter-spacing: -0.02em;
+        }
+        
+        .error-message {
+            font-size: 1.2rem;
+            color: #cbd5e1;
+            margin-bottom: 40px;
+            line-height: 1.6;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .sinhala-messages {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 40px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .sinhala-messages::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #2563eb, #7c3aed, #ec4899);
+        }
+        
+        .sinhala-quote {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #fbbf24;
+            margin: 15px 0;
+            font-family: 'Montserrat', sans-serif;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .sinhala-explanation {
+            font-size: 1rem;
+            color: #94a3b8;
+            margin-top: 20px;
+            font-style: italic;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        
+        .btn {
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-home {
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            color: white;
+        }
+        
+        .btn-home:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(37, 99, 235, 0.4);
+        }
+        
+        .btn-contact {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .btn-contact:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: #2563eb;
+            transform: translateY(-5px);
+        }
+        
+        .floating-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .floating-element {
+            position: absolute;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .floating-element:nth-child(1) {
+            top: 10%;
+            left: 5%;
+            animation-delay: 0s;
+        }
+        
+        .floating-element:nth-child(2) {
+            top: 20%;
+            right: 5%;
+            animation-delay: 1s;
+        }
+        
+        .floating-element:nth-child(3) {
+            bottom: 15%;
+            left: 8%;
+            animation-delay: 2s;
+        }
+        
+        .floating-element:nth-child(4) {
+            bottom: 25%;
+            right: 10%;
+            animation-delay: 3s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+        
+        @media (max-width: 768px) {
+            .error-number {
+                font-size: 5rem;
+            }
+            
+            .error-title {
+                font-size: 2rem;
+            }
+            
+            .error-message {
+                font-size: 1rem;
+            }
+            
+            .sinhala-quote {
+                font-size: 1.2rem;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .error-number {
+                font-size: 4rem;
+            }
+            
+            .sinhala-messages {
+                padding: 20px;
+            }
+        }
     </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>404</h2>
-      <h1>Page Not Found</h1>
-      <p>The specified file was not found on this website. Please check the URL for mistakes and try again.</p>
-      <h3>Why am I seeing this?</h3>
-      <p>This page was generated by the Firebase Command-Line Interface. To modify it, edit the <code>404.html</code> file in your project's configured <code>public</code> directory.</p>
+</head>
+<body>
+    <div class="floating-elements">
+        <div class="floating-element">
+            <i class="fas fa-code" style="font-size: 3rem; color: #2563eb;"></i>
+        </div>
+        <div class="floating-element">
+            <i class="fas fa-bug" style="font-size: 2.5rem; color: #fbbf24;"></i>
+        </div>
+        <div class="floating-element">
+            <i class="fas fa-search" style="font-size: 2rem; color: #7c3aed;"></i>
+        </div>
+        <div class="floating-element">
+            <i class="fas fa-question-circle" style="font-size: 2.2rem; color: #ec4899;"></i>
+        </div>
     </div>
-  </body>
+    
+    <div class="container">
+        <div class="error-animation">
+            <div class="error-number">404</div>
+            <div class="error-icon">
+                <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <h1 class="error-title">Oops! Page Not Found</h1>
+            <p class="error-message">Looks like you've wandered into uncharted territory. The page you're looking for doesn't exist or has been moved.</p>
+        </div>
+        
+        <div class="sinhala-messages">
+            <div class="sinhala-quote">එක්කො ඔහේට Signal නැහ් . නැත්තම් මගෙ Hosting එකෙ අවුලක්</div>
+            <div class="sinhala-explanation">(Hey buddy, no signal here. Nah, it's just an issue with my hosting)</div>
+            
+            <div class="sinhala-quote" style="margin-top: 30px;">තව පොඩ්ඩෙන් බලන්න මන් නම් කියන්නෙ</div>
+            <div class="sinhala-explanation">(I'll check it out in a bit, that's what I'd say)</div>
+        </div>
+        
+        <div class="action-buttons">
+            <a href="/portfolio.html" class="btn btn-home">
+                <i class="fas fa-home"></i>
+                Back to Home
+            </a>
+            <a href="/portfolio.html#contact" class="btn btn-contact">
+                <i class="fas fa-envelope"></i>
+                Contact Me
+            </a>
+        </div>
+    </div>
+    
+    <script>
+        // Add subtle interactive effects
+        document.addEventListener('DOMContentLoaded', function() {
+            const errorNumber = document.querySelector('.error-number');
+            const errorIcon = document.querySelector('.error-icon');
+            
+            // Add mouse move parallax effect
+            document.addEventListener('mousemove', (e) => {
+                const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+                const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+                
+                errorNumber.style.transform = `translate(${xAxis}px, ${yAxis}px) rotate(${xAxis * 0.1}deg)`;
+                errorIcon.style.transform = `translate(${-xAxis * 0.5}px, ${-yAxis * 0.5}px) scale(1.1)`;
+            });
+            
+            // Add click effect
+            errorNumber.addEventListener('click', () => {
+                errorNumber.style.animation = 'none';
+                setTimeout(() => {
+                    errorNumber.style.animation = 'float 3s ease-in-out infinite';
+                }, 10);
+            });
+        });
+    </script>
+</body>
 </html>
