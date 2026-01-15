@@ -30,30 +30,141 @@
         </div>
     </nav>
 
-    <!-- Maintenance Section -->
-    <section class="section hero maintenance-section">
-        <div class="container hero-content maintenance-content">
-            <div class="maintenance-text">
-                <h1 class="maintenance-title">
-                    <span class="hero-title-line">Feature</span>
-                    <span class="hero-title-line">Under</span>
-                    <span class="hero-title-line gradient-text">Maintenance</span>
-                </h1>
-                <p class="maintenance-subtitle">This Feature Is Still Maintaining By The Administrator</p>
-                <div class="maintenance-buttons">
-                    <a href="portfolio.html" class="btn btn-primary">
-                        <i class="fas fa-arrow-left"></i> Back to Website
+    <!-- Maintenance Hero Section -->
+    <section class="maintenance-hero">
+        <div class="container maintenance-hero-content">
+            <div class="maintenance-header-content">
+                <div class="maintenance-icon-large">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h1 class="maintenance-main-title">Under Maintenance</h1>
+                <p class="maintenance-description">We're currently improving this feature to provide you with a better experience. Our team is working diligently to enhance functionality and performance.</p>
+                <div class="maintenance-actions">
+                    <a href="portfolio.html" class="btn btn-primary maintenance-back-btn">
+                        <i class="fas fa-arrow-left"></i> Back to Portfolio
+                    </a>
+                    <a href="#maintenance-details" class="btn btn-outline maintenance-details-btn">
+                        <i class="fas fa-list"></i> View Maintenance Details
                     </a>
                 </div>
             </div>
-            <div class="maintenance-image-container">
-                <div class="maintenance-image floating">
-                    <div class="maintenance-image-inner glass-effect">
-                        <i class="fas fa-tools"></i>
+        </div>
+    </section>
+        
+    <!-- Maintenance Details Section -->
+    <section id="maintenance-details" class="maintenance-details-section">
+        <div class="container">
+            <div class="maintenance-overview">
+                <h2 class="section-title">Maintenance Overview</h2>
+                <p class="section-description">Here's what we're currently working on to improve your experience</p>
+            </div>
+            
+            <div class="maintenance-categories">
+                <div class="category-card">
+                    <div class="category-header completed">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Security Enhancements</h3>
+                        <span class="status-indicator">Completed</span>
+                    </div>
+                    <div class="category-content">
+                        <ul>
+                            <li>SSL certificate implementation</li>
+                            <li>Security vulnerability patching</li>
+                            <li>Authentication system upgrade</li>
+                            <li>Firewall configuration</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-header in-progress">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <h3>Performance Optimization</h3>
+                        <span class="status-indicator">In Progress</span>
+                    </div>
+                    <div class="category-content">
+                        <ul>
+                            <li>Code minification and compression</li>
+                            <li>Image optimization techniques</li>
+                            <li>Caching mechanism implementation</li>
+                            <li>Database query improvements</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-header in-progress">
+                        <i class="fas fa-bug"></i>
+                        <h3>Bug Fixes</h3>
+                        <span class="status-indicator">In Progress</span>
+                    </div>
+                    <div class="category-content">
+                        <ul>
+                            <li>UI/UX interface corrections</li>
+                            <li>Cross-browser compatibility fixes</li>
+                            <li>Error handling improvements</li>
+                            <li>Responsive design optimizations</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-header planned">
+                        <i class="fas fa-star"></i>
+                        <h3>Feature Development</h3>
+                        <span class="status-indicator">Planned</span>
+                    </div>
+                    <div class="category-content">
+                        <ul>
+                            <li>Project Section Development</li>
+                            <li>User dashboard implementation</li>
+                            <li>Advanced analytics integration</li>
+                            <li>API enhancement projects</li>
+                            <li>Mobile experience improvements</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="maintenance-timeline-section">
+                <h3 class="timeline-title">Development Timeline</h3>
+                <div class="timeline-container">
+                    <div class="timeline-item completed">
+                        <div class="timeline-marker">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Phase 1: Foundation</h4>
+                            <p>Security implementation and basic infrastructure setup</p>
+                            <span class="timeline-date">Completed</span>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item active">
+                        <div class="timeline-marker">
+                            <i class="fas fa-cog fa-spin"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Phase 2: Enhancement</h4>
+                            <p>Performance optimization and bug fixes in progress</p>
+                            <span class="timeline-date">Current Phase</span>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item upcoming">
+                        <div class="timeline-marker">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Phase 3: Innovation</h4>
+                            <p>Advanced features and cutting-edge improvements</p>
+                            <span class="timeline-date">Coming Soon</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
         
         <!-- Animated Background Elements -->
         <div class="maintenance-animation">
@@ -88,6 +199,348 @@
     </footer>
 
     <script src="script.js"></script>
+    <style>
+        /* Maintenance Page Redesign Styles */
+        
+        /* Hero Section */
+        .maintenance-hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .maintenance-hero-content {
+            text-align: center;
+            padding: 60px 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .maintenance-icon-large {
+            width: 120px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            border-radius: 30px;
+            color: white;
+            font-size: 3rem;
+            margin: 0 auto 30px;
+            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.3);
+        }
+        
+        .maintenance-main-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+        
+        .maintenance-description {
+            font-size: 1.2rem;
+            color: #cbd5e1;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+        }
+        
+        .maintenance-actions {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .maintenance-back-btn,
+        .maintenance-details-btn {
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        /* Details Section */
+        .maintenance-details-section {
+            padding: 80px 20px;
+            background: #0f172a;
+        }
+        
+        .maintenance-overview {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .section-description {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Category Cards */
+        .maintenance-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+        
+        .category-card {
+            background: rgba(30, 41, 59, 0.7);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s ease;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .category-header {
+            padding: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .category-header.completed {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(34, 197, 94, 0.1));
+            border-bottom: 2px solid #22c55e;
+        }
+        
+        .category-header.in-progress {
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.2), rgba(251, 191, 36, 0.1));
+            border-bottom: 2px solid #fbbf24;
+        }
+        
+        .category-header.planned {
+            background: linear-gradient(135deg, rgba(147, 197, 253, 0.2), rgba(147, 197, 253, 0.1));
+            border-bottom: 2px solid #93c5fd;
+        }
+        
+        .category-header i {
+            font-size: 1.8rem;
+            width: 50px;
+            text-align: center;
+        }
+        
+        .category-header.completed i {
+            color: #22c55e;
+        }
+        
+        .category-header.in-progress i {
+            color: #fbbf24;
+        }
+        
+        .category-header.planned i {
+            color: #93c5fd;
+        }
+        
+        .category-header h3 {
+            color: white;
+            font-size: 1.4rem;
+            margin: 0;
+            flex: 1;
+        }
+        
+        .status-indicator {
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .category-header.completed .status-indicator {
+            background: rgba(34, 197, 94, 0.2);
+            color: #22c55e;
+        }
+        
+        .category-header.in-progress .status-indicator {
+            background: rgba(251, 191, 36, 0.2);
+            color: #fbbf24;
+        }
+        
+        .category-header.planned .status-indicator {
+            background: rgba(147, 197, 253, 0.2);
+            color: #93c5fd;
+        }
+        
+        .category-content {
+            padding: 25px;
+        }
+        
+        .category-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .category-content li {
+            color: #cbd5e1;
+            padding: 12px 0;
+            padding-left: 25px;
+            position: relative;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .category-content li:last-child {
+            border-bottom: none;
+        }
+        
+        .category-content li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #2563eb;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        /* Timeline Section */
+        .maintenance-timeline-section {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .timeline-title {
+            text-align: center;
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 50px;
+        }
+        
+        .timeline-container {
+            position: relative;
+        }
+        
+        .timeline-container:before {
+            content: "";
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #2563eb, #7c3aed);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+            padding-left: 80px;
+        }
+        
+        .timeline-marker {
+            position: absolute;
+            left: 15px;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1rem;
+            z-index: 2;
+        }
+        
+        .timeline-item.completed .timeline-marker {
+            background: #22c55e;
+            box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.3);
+        }
+        
+        .timeline-item.active .timeline-marker {
+            background: #fbbf24;
+            box-shadow: 0 0 0 4px rgba(251, 191, 36, 0.3);
+        }
+        
+        .timeline-item.upcoming .timeline-marker {
+            background: #93c5fd;
+            box-shadow: 0 0 0 4px rgba(147, 197, 253, 0.3);
+        }
+        
+        .timeline-content {
+            background: rgba(30, 41, 59, 0.7);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .timeline-content h4 {
+            color: white;
+            margin: 0 0 10px 0;
+            font-size: 1.3rem;
+        }
+        
+        .timeline-content p {
+            color: #94a3b8;
+            margin: 0 0 15px 0;
+            line-height: 1.5;
+        }
+        
+        .timeline-date {
+            color: #2563eb;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .maintenance-main-title {
+                font-size: 2.5rem;
+            }
+            
+            .maintenance-description {
+                font-size: 1rem;
+            }
+            
+            .maintenance-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .maintenance-categories {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .category-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+            
+            .timeline-container:before {
+                left: 20px;
+            }
+            
+            .timeline-item {
+                padding-left: 60px;
+            }
+            
+            .timeline-marker {
+                left: 5px;
+                width: 30px;
+                height: 30px;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
     <script>
         // Maintenance page specific animations
         document.addEventListener('DOMContentLoaded', function() {
